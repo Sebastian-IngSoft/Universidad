@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RISAR</title>
+  <link rel="stylesheet" type="text/css" th:href="@{../CSS/bootstrap.min.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{../CSS/BuildStyle.css}">
+  <link rel="icon" th:href="@{../img/ico.ico}" >
+
+</head>
+<header class="shadow">
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
+    <div class="container-fluid">
+      <img class="shadow logobar" th:src="@{../img/logo.jpg}"  alt="">
+      <button class="controlardrop navbar-toggler bg-secondary px-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2  mb-lg-0 d-flex">
+          <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+            <a class="nav-link active" aria-current="page" th:href="@{/}">Inicio</a>
+          </li>
+          <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+            <a class="nav-link active" aria-current="page" href="#">Servicios</a>
+          </li>
+          <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+            <a class="nav-link active" aria-current="page" href="#">Proyectos</a>
+          </li>
+          <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+            <a class="nav-link active" aria-current="page" href="#">Galeria</a>
+          </li>
+          <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+            <a class="nav-link active" aria-current="page" th:href="@{/Solicitudes/}">Contacto</a>
+          </li>                              
+        </ul>
+        <form class="d-flex ">
+          <a th:href="@{/Login}" class=" shadow btn btn-primary btn-lg bg-black controlar" data-toggle="modal">INGRESAR</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>  
+<body>
+  <div class="fondo bg-secondary" >
+   
+            <div class="centrar">
+            <div class="container border px-2 py-2">
+                <div class="card">
+                    <div class="card-header">
+                    
+                    </div>
+                    <div class="card-body">
+                        <form th:action="@{/Solicitudes/form}" th:object="${solicitudes}" method="post">
+                        <div class="row">
+                            <h2>Datos</h2>
+                            <div class="card shadow p-3 mb-5 bg-body rounded col-sm-12 col-md-6 ">
+                            Nombre Completo <br>
+                            <input  th:field="*{nombre}" type="text" width="" th:errorclass="'form-control alert-danger'">
+                            <small class="form-text text-danger" th:if="${#fields.hasErrors('nombre')}">Campo obligatorio</small>
+                            </div>
+                            
+                            <div class=" card shadow p-3 mb-5 bg-body rounded col-sm-12 col-md-6">
+                                Tlf/Celular
+                                <br>
+                                <input placeholder="Ingrese el precio" th:field="*{telefono}" type="text" th:errorclass="'form-control alert-danger'">
+                                <small class="form-text text-danger" th:if="${#fields.hasErrors('telefono')}">Campo obligatorio</small>
+
+                            </div>
+                            <div class=" card shadow p-3 mb-5 bg-body rounded col-sm-12 col-md-6">
+                                Documento de Identidad
+                              <br>
+                              <input th:field="*{di}" type="text" th:errorclass="'form-control alert-danger'">
+                              <small class="form-text text-danger" th:if="${#fields.hasErrors('di')}">Campo obligatorio</small>
+
+                            </div>
+                      
+                        
+                        <br>
+                        <h2>
+                          Asunto
+                        </h2>  
+                        <div class=" card shadow p-3 mb-5 bg-body rounded col-sm-12 col-md-6">
+                          
+                        <br>
+                        <input th:field="*{asunto}" type="text" th:errorclass="'form-control alert-danger'">
+                        <small class="form-text text-danger" th:if="${#fields.hasErrors('asunto')}">Campo obligatorio</small>
+
+                      </div>
+                        
+                    </div>
+                      <h2>
+                        Mensaje
+                      </h2>
+                      <div class="row mx-1  d-flex">
+                        <small class="form-text text-danger" th:if="${#fields.hasErrors('descripcion')}">Campo obligatorio</small>
+
+                        <textarea th:field="*{descripcion}"  name="mensaje" id="mensaje" class="for-control shadow p-3 mb-5 bg-body rounded" rows="8"></textarea>
+                        
+
+                      </div>
+
+                       
+
+
+
+                        
+                        <center><button type="submit" class="btn btn-warning">Enviar</button>
+                        </center>
+                        </div>
+                      </div>
+                    </form>
+            </div>
+        </div>
+        
+    </div>
+    <script th:src="@{/JS/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/JS/jquery-3.6.0.min.js}"></script>  
+</body>
+</html>

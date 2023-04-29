@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="Layouts/Fragmentos :: head">
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul th:replace="Layouts/Fragmentos :: ul">  
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+                
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-secondary topbar mb-4 static-top shadow">
+                </nav>
+                <!-- End of Topbar -->
+                <div class="container pt-3">
+                    
+                    <div class="card">
+                        <form th:action="@{/Administracion/form}" th:object="${Usuarios}" method="post">
+                        <div class="card-header">Nuevo Usuario</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div th:text="${Obligatorio}" ></div>
+                                <div class="col-md-6 mv-3">
+                                    <label for="">Nombre</label>
+                                    <input th:field="*{nombres}" type="text" class="form-control"/>
+                                    
+                                </div>
+                                <div class="col-md-6 mv-3">
+                                    <label for="">Apellido</label>
+                                    <input th:field="*{apellidos}" type="text" class="form-control"/>
+                                    
+                                </div>
+                                <div class="col-md-6 mv-3">
+                                    <label for="">Usuario</label>
+                                    <input th:field="*{usuario}" type="text" class="form-control"/>
+                                </div>
+                                <div class="col-md-6 mv-3">
+                                    <label for="">Contraseña</label>
+                                    <input th:field="*{contrasenia}" type="text" class="form-control"/>
+                                </div>
+                                <div class="col-md-6 mv-3">
+                                    <label for="">Puesto</label>
+                                    <input th:field="*{rol}" type="text" class="form-control"/>
+                                </div>
+                                <div class="col-md-6 mv-3">
+                                    <input  type="hidden" th:field="*{id}" name="" id="">
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-3">
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-warning"> Guardar</button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                    <div class="card-header">Usuarios</div>
+                    <div class="card-body">
+                        <table class="table table-border table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Nombres</th>
+                                    <th>Apellidos</th>
+                                    <th>Usuario</th>
+                                    <th>Contraseña</th>
+                                    <th>Puesto</th>
+                                    <th></th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="item : ${listausuarios}">
+                                    <td th:text="${item.nombres}"></td>
+                                    <td th:text="${item.apellidos}"></td>
+                                    <td th:text="${item.usuario}"></td>
+                                    <td th:text="${item.contrasenia}"></td>
+                                    <td th:text="${item.rol}"></td>
+                                    <td class="text-center"><a th:href="@{/Administracion/editar/} + ${item.id}" class="btn btn-warning">Modificar</a></td>
+                                    <td hidden class="text-center"><a th:href="@{/Administracion/eliminar/} + ${item.id}" class="btn btn-danger">Eliminar</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
+
+                
+                
+            
+            
+            
+            
+                </div>
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer th:replace="Layouts/Fragmentos :: footer" class="sticky-footer bg-warning">
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+        <div th:replace="Layouts/Fragmentos :: scrip">
+    </div>
+</body>
+</html>

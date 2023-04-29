@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="Layouts/Fragmentos :: head">
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul th:replace="Layouts/Fragmentos :: ul">  
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+                
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-secondary topbar mb-4 static-top shadow">
+                </nav>
+                <!-- End of Topbar -->
+                <div class="container">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <img class="col-3" th:src="@{/img/logoformulario.JPG}" alt="">
+                            <div class="col-3">
+                                <p>Version: F1-IGN-TRA.7.2</p>
+                                <p>Codigo: 02</p>
+                                <p>Fecha: 25-04-2022</p>
+                            </div>
+                            <p class="col-6 text-center my-auto fs-3">PERMISO DE INGRESO</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-6" th:text="'Persona: ' + ${permiso.usuarios.nombres}+' '+ ${permiso.usuarios.apellidos}" ></p>
+                            
+                            <p class="col-6" th:text="'Puesto: ' + ${permiso.usuarios.rol}"> </p>
+                            
+                        </div>
+                        <div class="row">
+                            <p class="col-6" th:text="'Fecha de Ingreso: ' + ${permiso.fecha}">Fecha: </p>
+                            <p class="col-6"th:text="'Empresa: ' + ${permiso.empresa}">Empresa: </p>
+                        </div>
+                        <div class="row">
+                            <img class="col-2 p-auto" th:src="@{/img/autorizado.jpg}" alt="">
+                            <img class="col-2 p-auto" th:src="@{/img/firmam.jpg}" alt="">
+                            <img class="col-2 p-auto" th:src="@{/img/firmaj.jpg}" alt="">
+                        </div>
+                        <div class="row">
+                            <p class="col-2 text-center fs-6">Sello de autorizacion</p>
+                            <p class="col-2 text-center fs-6">Firma: Miriam Sarmiento</p>
+                            <p class="col-2 text-center fs-6">Firma: Juan Rivera</p>
+                        </div>
+                    </div>
+                </div>   
+                </div>
+                
+            
+            
+            
+            
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer th:replace="Layouts/Fragmentos :: footer" class="sticky-footer bg-warning">
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+        <div th:replace="Layouts/Fragmentos :: scrip">
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RISAR</title>
+  <link rel="stylesheet" type="text/css" th:href="@{../CSS/bootstrap.min.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{../CSS/BuildStyle.css}">
+  <link rel="icon" th:href="@{../img/ico.ico}" >
+
+</head>
+<header class="shadow">
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow">
+    <div class="container-fluid">
+      <img class="shadow logobar" th:src="@{../img/logo.jpg}"  alt="">
+      <button class="controlardrop navbar-toggler bg-secondary px-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2  mb-lg-0 d-flex">
+          <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+            <a class="nav-link active" aria-current="page" th:href="@{/}">Inicio</a>
+          </li>
+          <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+            <a class="nav-link active" aria-current="page" href="#">Servicios</a>
+          </li>
+          <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+            <a class="nav-link active" aria-current="page" href="#">Proyectos</a>
+          </li>
+          <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+            <a class="nav-link active" aria-current="page" href="#">Galeria</a>
+          </li>
+          <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+            <a class="nav-link active" aria-current="page" th:href="@{/Solicitudes/}">Contacto</a>
+          </li>                              
+        </ul>
+        <form class="d-flex ">
+          <a th:href="@{/Login}" class=" shadow btn btn-primary btn-lg bg-black controlar" data-toggle="modal">INGRESAR</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>  
+<body>
+  <div class="  row align-items-stretch fondoinicio">
+    <div class=" p-5 mx-5 mt-4 col d-none d-lg-block col-md-5 col-lg-5 col-xl-5 ">
+    
+              <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                  <img th:src="@{../img/boceto1.jpg}" class="shadow editando-imagen d-block w-100"  alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                  <img th:src="@{../img/boceto2.jpg}" class="shadow editando-imagen  d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                  <img th:src="@{../img/boceto3.jpg}" class="shadow editando-imagen d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>     
+    </div>
+    <div class="shadow redondear col bg-secondary  col-sm-12 col-md-5 col-lg-5 col-xl-5 mx-5 px-5 bg-opacity-75 text-white px-sm-5 ">
+              <br>
+              RISAR esta conformada por ingenieros civiles, tanto practicantes como profesionales, cuentan con una gran cantidad de trabajadores para poder realizar las obras dadas, nuestra especialidad son la construcción de torres de telecomunicaciones las cuales son: Torres arriostradas o atirantadas, torres autosoportadas, torres monopolo.
+              <br>
+              <br>
+              Misión: Contribuir en la mejor infraestructura de obras civiles en el Perú, realizar proyectos de la mejor manera para nuestros clientes.
+              <br>
+              <br>
+              Visión:  Ser una de las mejores empresas de ingeniería civil, contribuir en proyecto de países externos, implementar nuevas áreas en la empresa para satisfacer la demanda de proyectos realizados por el estado o por clientes privados.
+              <br>
+              <br>
+              Valores: 
+              - Liderazgo: esforzarse en dar forma a un futuro mejor.
+              <br>
+              - Colaboración: potenciar el talento colectivo.
+              <br>
+              - Integridad: ser transparentes.
+              <br>
+              - Rendir cuentas: ser responsables.
+              <br>
+              - Pasión: estar comprometidos con el corazón y con la mente.
+              <br>
+              - Diversidad: contar con un amplio abanico de marcas y ser tan inclusivos como ellas.
+              <br>
+              - Calidad: búsqueda de la excelencia.
+              <br><br><br><br>    
+    </div>
+  </div>
+  <script th:src="@{../JS/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{../JS/jquery-3.6.0.min.js}"></script>  
+</body>
+</html>

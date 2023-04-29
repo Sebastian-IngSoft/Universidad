@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:fragment="head">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/BuildStyle2.css}">
+    <link rel="icon" th:href="@{/img/ico.ico}" >
+    
+  <link rel="stylesheet" type="text/css" th:href="@{/CSS/bootstrap.min.css}">
+
+    <title>RISAR</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link th:href="@{/css/sb-admin-2.min.css}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul  th:fragment="ul" class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" >
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">
+                    <img class="shadow logobar rounded" th:src="@{/img/logo.jpg}"  alt="">
+                </div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/Administracion/}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Administracion</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Nav Item - Pages Collapse Menu -->
+
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Operaciones
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/Formularios/}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Formularios</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/Archivos/}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Archivos</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/Solicitudes/VerSolicitudes}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Solicitudes</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <form th:action="@{/logout}" method="post">
+                <button type="submit" class="rounded-circle border-0" id=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+                    <path d="M7.5 1v7h1V1h-1z"/>
+                    <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
+                  </svg></button>
+                </form>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+                
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-secondary topbar mb-4 static-top shadow">
+
+                    
+                </nav>
+                <!-- End of Topbar -->
+
+
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer th:fragment="footer" class="sticky-footer bg-warning">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; SystemRisar 2022</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+  
+    <div th:fragment="scrip">
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script th:src="@{/JS/scripts.js}"></script>
+    </div>
+
+
+</body>
+
+</html>

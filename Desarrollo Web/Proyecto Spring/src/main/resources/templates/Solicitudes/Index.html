@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="Layouts/Fragmentos :: head">
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul th:replace="Layouts/Fragmentos :: ul">  
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+                
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-secondary topbar mb-4 static-top shadow">
+                </nav>
+                <!-- End of Topbar -->
+                <div class="container pt-3">
+                    
+                <div class="card">
+
+                    <div class="card-header">Solicitudes Registradas</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <form th:action="@{/Solicitudes/buscarSolicitud}" method="post">
+                                <div class="row">
+                                <input type="text" class="col-3" name="nombre" placeholder="Nombre">   
+                                <button class="col-1 btn btn-secondary">Buscar</button> 
+                            </div>
+                            </form>
+                        </div>
+                        <br>
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Nombre del Autor</th>
+                                    <th>Asunto</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="item : ${listaSolicitudes}">
+                                    <td th:text="${item.nombre}"></td>
+                                    <td th:text="${item.asunto}"></td>
+                                    <td class="text-center"><a th:href="@{/Solicitudes/Ver/} + ${item.id}" class="btn btn-warning">Ver</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+
+                </div>
+                
+            
+            
+            
+            
+                </div>
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer th:replace="Layouts/Fragmentos :: footer" class="sticky-footer bg-warning">
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+        <div th:replace="Layouts/Fragmentos :: scrip">
+    </div>
+</body>
+</html>

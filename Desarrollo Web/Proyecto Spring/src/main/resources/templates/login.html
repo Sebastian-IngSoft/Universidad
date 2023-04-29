@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" type="text/css" th:href="@{../CSS/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{../CSS/BuildStyle.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{../CSS/BuildStyle.css}">
+    <link rel="icon" th:href="@{../img/ico.ico}" >
+    <style>
+        body{
+            background: #ffbb33 ;
+            background: linear-gradient(to right , #FFC300 , #F3F2C9 );
+        }
+        .bg{
+            background-image: url(../img/login.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <header class="shadow" hidden>
+  
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary shadow">
+          <div class="container-fluid">
+            <img class="shadow logobar rounded" th:src="@{../img/logo.jpg}"  alt="">
+            <button class="controlardrop navbar-toggler bg-secondary px-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2  mb-lg-0 d-flex">
+                <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center text-color-white">
+                  <a class="nav-link active" aria-current="page" th:href="@{/}">Inicio</a>
+                </li>
+                <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+                  <a class="nav-link active" aria-current="page" href="#">Servicios</a>
+                </li>
+                <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+                  <a class="nav-link active" aria-current="page" href="#">Proyectos</a>
+                </li>
+                <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+                  <a class="nav-link active" aria-current="page" href="#">Galeria</a>
+                </li>
+                <li class="nav-item  mx-md-4 eventohover px-md-3 shadow text-center">
+                  <a class="nav-link active" aria-current="page" th:href="@{/Solicitudes/}">Contacto</a>
+                </li>                              
+              </ul>
+              <form class="d-flex ">
+                <a th:href="@{/Login}" class=" shadow btn btn-primary btn-lg bg-black controlar" data-toggle="modal">INGRESAR</a>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>     
+    <div class="container w-75  mt-5 rounded ">
+        <div class="row align-items-stretch ">
+            <div class="col bg  d-none d-md-block col-md-5 col-lg-5 col-xl-6 rounded">
+
+            </div>
+            <div class="col bg-white p-5 rounded-end">
+                <div class="text-end">
+                    <!--<a th:href="@{/}"><img class="logo1 rounded shadow " th:src="@{../img/logo.jpg}" width="108" alt=""></a>
+                    -->
+                </div>
+                <h2 class="fw-bold text-center py-5 my-md-5">Bienvenido</h2>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert" th:if="${error != null}"><strong>Error!</strong> <span th:text="${error}"></span><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
+                <form th:action="@{/LoginS}" method="post">
+                    <div class="mb-4">
+                        <label for=" email" class="form-label "> Usuario</label>
+
+                        <input type="text" class="form-control" name="username" id="username"> 
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="form-label"> Contraseña</label>
+
+                        <input type="password" id="password" class="form-control" name="password">
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary bg-warning text-black">Ingresar </button>
+                        
+                    </div>
+                </form>
+            </div>
+            
+
+        </div>
+    </div>
+    
+    <script th:src="@{../JS/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{../JS/jquery-3.6.0.min.js}"></script>
+</body>
+</html>

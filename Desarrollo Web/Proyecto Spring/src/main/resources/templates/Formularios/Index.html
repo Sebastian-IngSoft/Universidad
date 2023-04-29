@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="Layouts/Fragmentos :: head">
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul th:replace="Layouts/Fragmentos :: ul">  
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+                
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-secondary topbar mb-4 static-top shadow">
+                </nav>
+                <!-- End of Topbar -->
+                <div class="container">
+                    <div class="row">
+                            <div class="card col-4"><div class="card-header">Carnet electronico
+                            </div>
+                            <div class="card-body">
+                            <center><a th:href="@{/Formularios/carnet}"><img class="col-7 " th:src="@{/img/carnet.png}" alt=""></a></center>    
+                            </div>
+                            </div>
+                            
+                            <div class="card col-4">
+                            <div class="card-header">Permiso de trabajo en altura
+                            </div>
+                            <div class="card-body"><center><a th:href="@{/Formularios/altura}"><img class="col-12" th:src="@{/img/trabajoenaltura.jpg}" alt=""></a></center>
+                            </div>
+                            </div>
+                            
+                            
+                            <div class="card col-4"><div class="card-header">Permiso de ingreso
+                            </div>
+                            <div class="card-body">
+                            <center><a th:href="@{/Formularios/ingreso}"><img class="col-11 " th:src="@{/img/ingreso.jpg}" alt=""></a></center>
+                            </div></div>
+                    
+
+
+
+
+
+
+                </div>
+            </div>
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer th:replace="Layouts/Fragmentos :: footer" class="sticky-footer bg-warning">
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+        <div th:replace="Layouts/Fragmentos :: scrip">
+    </div>
+</body>
+</html>

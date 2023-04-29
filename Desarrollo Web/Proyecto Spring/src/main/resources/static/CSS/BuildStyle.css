@@ -1,0 +1,102 @@
+*{
+    width: 100%;
+
+    
+}
+
+
+.fondoinicio{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    width: 100%;
+  }
+.controlar{
+    width: 40%;
+    margin: 0% 0% 0% 60%;
+}
+
+.controlardrop{
+    width: min-content;
+    
+}
+
+
+.controlaricon{
+    width: min-content;
+}
+.logobar{
+    width: 200px;
+    padding: 0%;
+}
+.eventohover:hover{
+    background: linear-gradient(to right , white , silver );
+    border-radius: 6ch;
+}
+.eventohover{
+    border-radius: 6ch;
+}
+.navegador{
+    background-color:#ffc107;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu{
+    display: contents;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.log{
+    display: flex;
+    height: 40px;
+    margin: 30px 100px 0px 100px;
+    padding: 10px 10px 34px 10px;
+    border-width: 1px;
+}
+
+
+.cuerpo{
+    background-image: url(../img/fondo.jpg);
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+a{
+    text-decoration: none;
+}
+
+.redondear{
+    border-bottom-left-radius: 10cm;
+    border-bottom-right-radius: 10cm;
+   
+}
+
+.carrusel{
+    width:800px ;
+    margin: 0px 0px 0px 0xp;
+    padding: 30px 30px 40px 50px;
+}
+.editando-imagen{
+    border-top-left-radius:4cm ;
+    border-top-right-radius:0cm ;
+    border-bottom-right-radius:4cm ;
+    border-bottom-left-radius:0cm ;
+}
+.texto-contenido{
+    width: 760px;
+    height: 500px;
+    padding: 0px 0px 0px 0px;
+    margin: 80px 40px 0px 90px;
+}
+.tablapersonal{
+    background-color: aqua;
+}
+.thpersona{
+    background-color: aquamarine;
+}
+
